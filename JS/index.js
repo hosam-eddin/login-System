@@ -121,13 +121,19 @@ function login() {
     (user) => user.accMail === email && user.accPass === password
   );
 
-  if (existUser) {
+  if (findUser) {
     localStorage.setItem("accUsername", findUser.name);
     window.open("./home.html");
   } else {
     document.querySelector(".showUp").innerHTML =
       '<span class="text-danger">Incorrect email or password</span>';
   }
+}
+
+//! say welcome to user
+if (window.location.pathname == "/home.html") {
+  var welcome = document.getElementById("username");
+  welcome.innerHTML = ` welcome ${emailContainer[i].accName}`
 }
 
 function logout() {
