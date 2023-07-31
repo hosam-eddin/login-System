@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogIn System</title>
+
+    <!-- ^=======> Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ^=======> Bootstrap Style Sheet -->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <!-- Font Awesome Libirary -->
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <!-- * =======> Main Style sheet -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- website image -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./Images/bookmark.png"
+    />
+  </head>
+
+  <body>
+    <!----------------------- Main Container -------------------------->
+    <div
+      class="container d-flex justify-content-center align-items-center min-vh-100"
+    >
+      <!----------------------- Login Container -------------------------->
+      <div class="row border rounded-5 p-3 bg-white shadow box-area">
+        <!-------------------------- Right Box ---------------------------->
+        <div class="col-md-6 right-box">
+          <div class="row align-items-center">
+            <div class="header-text headerHello mb-4">
+              <h2>Hello,</h2>
+              <p>We will be happy if u join us</p>
+            </div>
+
+            <div class="mb-3">
+              <input
+                class="form-control nameInput"
+                type="name"
+                placeholder="Name"
+              />
+            </div>
+
+            <div class="mb-3">
+              <input
+                class="form-control emailInput"
+                type="email"
+                placeholder="Email"
+              />
+              <p class="alert alert-danger d-none" id="alert1"></p>
+            </div>
+
+            <div class="pass-field mb-5 position-relative">
+              <input
+                class="form-control passwordInput"
+                type="password"
+                placeholder="Password"
+              />
+              <i id="passwordIcon" class="fa-solid fa-eye"></i>
+              <p class="alert alert-danger d-none" id="alert2"></p>
+            </div>
+            <p class="text-danger showUp"></p>
+
+            <div class="mb-3">
+              <button class="btn btn-lg btn-success w-100 fs-6 signBtn">
+                Sign in
+              </button>
+            </div>
+
+            <div class="row dont-ve">
+              <small class="loginMassege">
+                have account?
+                <a href="index.html" class="signView">login</a>
+              </small>
+            </div>
+          </div>
+        </div>
+        <!--------------------------- Left Box ----------------------------->
+        <div
+          class="slider col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
+          style="background: #103cbe"
+        >
+          <div class="featured-image mb-3 text-center">
+            <i class="fa-solid fa-right-to-bracket display-1 text-white "></i>
+            <p
+              class="text-white fs-2"
+              style="
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: 600;
+              "
+            >
+              Sign In
+            </p>
+          </div>
+          <p
+            class="text-white fs-2"
+            style="
+              font-family: 'Courier New', Courier, monospace;
+              font-weight: 600;
+            "
+          >
+            Be Part Of Us
+          </p>
+          <small
+            class="text-white text-wrap text-center mb-3"
+            style="width: 17rem; font-family: 'Courier New', Courier, monospace"
+            >Join experienced Designers on this platform.</small
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="./JS/index.js"></script>
+  </body>
+</html>

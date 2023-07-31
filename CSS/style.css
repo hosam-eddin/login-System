@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(-45deg, #23d5ab, #8253af, #0689D6, #87d5fa);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  height: 100vh;
+  -webkit-animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/*------------ Login container ------------*/
+.box-area {
+  width: 930px;
+}
+/*------------ Right box ------------*/
+.right-box {
+  padding: 40px 30px 40px 40px;
+}
+/*------------ Custom Placeholder ------------*/
+::placeholder {
+  font-size: 16px;
+}
+.rounded-4 {
+  border-radius: 20px;
+}
+.rounded-5 {
+  border-radius: 30px;
+}
+/*------------ For small screens------------*/
+@media only screen and (max-width: 768px) {
+  .box-area {
+    margin: 0 10px;
+  }
+  .left-box {
+    height: fit-content;
+    overflow: hidden;
+
+  }
+  .right-box {
+    padding: 20px;
+  }
+}
+
+#passwordIcon{
+  position: absolute;
+  right: 45px;
+  top: 10px;
+  cursor: pointer;
+}
+i{
+  color: #999;
+}
+.valid i{
+  scale: 1;
+  color: green;
+}
