@@ -59,7 +59,6 @@ if (window.location.pathname == "/signup.html") {
   });
 }
 
-
 function signUp() {
   if (!emptySignCheck()) {
     document.querySelector(".showUp").innerHTML =
@@ -109,7 +108,6 @@ if (window.location.pathname == "/index.html") {
 }
 
 function login() {
-
   if (!emptyLogCheck()) {
     document.querySelector(".showUpLog").innerHTML =
       '<span class="text-danger">All inputs are required</span>';
@@ -122,7 +120,7 @@ function login() {
   );
 
   if (findUser) {
-    localStorage.setItem("accUsername", findUser.name);
+    localStorage.setItem("accUsername", findUser.accName);
     window.open("./home.html");
   } else {
     document.querySelector(".showUp").innerHTML =
@@ -132,8 +130,10 @@ function login() {
 
 //! say welcome to user
 if (window.location.pathname == "/home.html") {
-  var welcome = document.getElementById("username");
-  welcome.innerHTML = ` welcome ${emailContainer[i].accName}`
+  for (let i = 0; i < emailContainer.length; i++) {
+    var welcome = document.getElementById("username");
+    welcome.innerHTML = `welcome ${emailContainer[i].accName}`;
+  }
 }
 
 function logout() {
